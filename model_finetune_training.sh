@@ -1,3 +1,6 @@
+# create train folder if not exists
+mkdir -p output
+
 #clear existing files
 rm -rf output/*
 
