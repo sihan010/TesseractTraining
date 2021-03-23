@@ -12,29 +12,29 @@ https://github.com/tesseract-ocr/tessdata_best
 
 1.  Install Tesseract and build tools
 
-        	Install MacPorts from https://www.macports.org/install.php
+        Install MacPorts from https://www.macports.org/install.php
 
-        	Run following commands -
-        	sudo port install automake autoconf
-        	sudo port install pkgconfig
-        	sudo port install leptonica
-        	sudo port install cairo pango
-        	sudo port install icu +devel
+        Run following commands -
+        sudo port install automake autoconf
+        sudo port install pkgconfig
+        sudo port install leptonica
+        sudo port install cairo pango
+        sudo port install icu +devel
 
-        	Clone the latest repo "OR" download release source, extract, rename folder to tesseract
+        Clone the latest repo "OR" download release source, extract, rename folder to tesseract
 
-        	git clone https://github.com/tesseract-ocr/tesseract/
-        	cd tesseract
-        	./autogen.sh
-        	./configure \
-        		--with-extra-libraries=/opt/local/lib \
-        		--with-extra-includes=/opt/local/include \
-        		LDFLAGS=-L/opt/loca/lib \
-        		CPPFLAGS=-I/opt/local/include
-        	make
-        	sudo make install
-        	make training
-        	sudo make training-install
+        git clone https://github.com/tesseract-ocr/tesseract/
+        cd tesseract
+        ./autogen.sh
+        ./configure \
+            --with-extra-libraries=/opt/local/lib \
+            --with-extra-includes=/opt/local/include \
+            LDFLAGS=-L/opt/loca/lib \
+            CPPFLAGS=-I/opt/local/include
+        make
+        sudo make install
+        make training
+        sudo make training-install
 
 2.  Check Tesseract is installed by tesseract --version
 
@@ -42,37 +42,37 @@ https://github.com/tesseract-ocr/tessdata_best
 
 3.  Clone this repository.
 
-    #fonts folder should include the font .ttf file
+        #fonts folder should include the font .ttf file
 
-    #langdata_lstm folder should include the language langdata from
+        #langdata_lstm folder should include the language langdata from
 
-    https://github.com/tesseract-ocr/langdata
+        https://github.com/tesseract-ocr/langdata
 
-    folder structure ./langdata/eng/......
+        folder structure ./langdata/eng/......
 
-    Latin.unicharset and radical-stroke.txt can be same
+        Latin.unicharset and radical-stroke.txt can be same
 
-    #tessdata folder should contain the .traineddata file from
+        #tessdata folder should contain the .traineddata file from
 
-    https://github.com/tesseract-ocr/tessdata_best
+        https://github.com/tesseract-ocr/tessdata_best
 
-    folder structure ./tessdata/eng.traineddata
+        folder structure ./tessdata/eng.traineddata
 
-    ./tessdata/config can be same, it contains lstm.train which is user for training
+        ./tessdata/config can be same, it contains lstm.train which is user for training
 
 4.  Recommended folder structure![Recommended FS](https://raw.githubusercontent.com/sihan010/TesseractTraining/master/folder_structure.png)
 
 5.  IMPORTANT
 
-    tesstrain_utils.sh
+        tesstrain_utils.sh
 
-    language-specific.sh
+        language-specific.sh
 
-    These are version specific, copy them from tesseract/src/training
+        These are version specific, copy them from tesseract/src/training
 
-    \*If tesstrain command not found you can also find them in tesseract/src/training
+        \*If tesstrain command not found you can also find them in tesseract/src/training
 
-    \*\*Files in this repo are of 4.1.1
+        \*\*Files in this repo are of 4.1.1
 
 6.  Use the shell files in following order
 
