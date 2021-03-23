@@ -1,0 +1,1 @@
+train/eng.Malgun_Gothic.exp0.lstmf
