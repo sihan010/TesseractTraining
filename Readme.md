@@ -1,9 +1,13 @@
 ## Tesseract Custom Font training in Mac
 
 Video tutorial - https://www.youtube.com/watch?v=TpD76k2HYms
+
 Important repos -
+
 https://github.com/tesseract-ocr/tesseract
+
 https://github.com/tesseract-ocr/langdata
+
 https://github.com/tesseract-ocr/tessdata_best
 
 1.  Install Tesseract and build tools
@@ -37,23 +41,37 @@ https://github.com/tesseract-ocr/tessdata_best
         leptonica version should be 1.76 or higher
 
 3.  Clone this repository.
+
     #fonts folder should include the font .ttf file
+
     #langdata_lstm folder should include the language langdata from
+
     https://github.com/tesseract-ocr/langdata
+
     folder structure ./langdata/eng/......
+
     Latin.unicharset and radical-stroke.txt can be same
+
     #tessdata folder should contain the .traineddata file from
+
     https://github.com/tesseract-ocr/tessdata_best
+
     folder structure ./tessdata/eng.traineddata
+
     ./tessdata/config can be same, it contains lstm.train which is user for training
 
 4.  Recommended folder structure![Recommended FS](https://raw.githubusercontent.com/sihan010/TesseractTraining/master/folder_structure.png)
 
 5.  IMPORTANT
+
     tesstrain_utils.sh
+
     language-specific.sh
+
     These are version specific, copy them from tesseract/src/training
+
     \*If tesstrain command not found you can also find them in tesseract/src/training
+
     \*\*Files in this repo are of 4.1.1
 
 6.  Use the shell files in following order
